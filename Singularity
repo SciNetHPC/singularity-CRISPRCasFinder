@@ -108,7 +108,6 @@ from: ubuntu:xenial
 
 %setup
     mkdir -p ${SINGULARITY_ROOTFS}/usr/local/src/CRISPRCasFinder
-    cp CRISPRCasFinder.singularity.patch ${SINGULARITY_ROOTFS}/usr/local/src/CRISPRCasFinder/
 
 %post
 	export DEBIAN_FRONTEND=noninteractive
@@ -281,8 +280,6 @@ from: ubuntu:xenial
     # CRISPRCasFinder #
     ###################
     PN="CRISPRCasFinder"
-    PV="4.2.17"
-    P="${PN}-${PV}"
 
     test -d "${prefix}/src/${PN}" || mkdir -p "${prefix}/src/${PN}"
     cd "${prefix}/src/${PN}"
@@ -291,7 +288,6 @@ from: ubuntu:xenial
     curl -L -o "${PN}.zip" --silent "${cripsr_cas_url}"
 
     unzip "${PN}.zip"
-    mv "${PN}-master" "${PN}"
 
     cd "${PN}"
     crispr_data="${prefix}/share/${PN}"
