@@ -7,11 +7,11 @@ from: ubuntu:xenial
 %labels
 	MAINTAINER Bertrand Neron <bneron@pasteur.fr>
 	AUTHOR Couvin David, Bernheim Aude, Toffano-Nioche Claire, Touchon Marie, Michalik Juraj, Neron Bertrand, Rocha Eduardo, Vergnaud Gilles, Gautheret Daniel, Pourcel Christine.
-    CRISPRCasFinder.version 4.2.18
+    CRISPRCasFinder.version 4.2.17
 
 %help
     Name:
-      CRISPRCasFinder standalone version 4.2.18
+      CRISPRCasFinder standalone version 4.2.17
 
     Synopsis:
       A perl script to identify CRISPR arrays and associated Cas genes in DNA sequences
@@ -281,13 +281,13 @@ from: ubuntu:xenial
     # CRISPRCasFinder #
     ###################
     PN="CRISPRCasFinder"
-    PV="4.2.18"
+    PV="4.2.17"
     P="${PN}-${PV}"
 
     test -d "${prefix}/src/${PN}" || mkdir -p "${prefix}/src/${PN}"
     cd "${prefix}/src/${PN}"
 
-    cripsr_cas_url="https://github.com/bneron/${PN}/archive/master.zip"
+    cripsr_cas_url="https://crisprcas.i2bc.paris-saclay.fr/Home/DownloadFile?filename=CRISPRCasFinder.zip"
     curl -L -o "${PN}.zip" --silent "${cripsr_cas_url}"
 
     unzip "${PN}.zip"
