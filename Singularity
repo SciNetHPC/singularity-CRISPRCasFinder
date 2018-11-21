@@ -295,7 +295,7 @@ from: ubuntu:xenial
 
     curl -sLO "https://raw.githubusercontent.com/bneron/CRISPRCasFinder/f10ae5d5306adf7633b1a82e018bbeb5f6119cfb/CRISPRCasFinder.patch"
     patch CRISPRCasFinder.pl CRISPRCasFinder.patch
-    curl -sLO "https://raw.githubusercontent.com/bneron/CRISPRCasFinder/e2b9882e5715b1a702fcdc8940a625cbabf49447/singularity/CRISPRCasFinder.def"
+    curl -sLO "https://raw.githubusercontent.com/bneron/CRISPRCasFinder/e2b9882e5715b1a702fcdc8940a625cbabf49447/singularity/CRISPRCasFinder.singularity.patch"
     patch CRISPRCasFinder.pl CRISPRCasFinder.singularity.patch
 
     install -m 0755 CRISPRCasFinder.pl ${prefix}/bin/CRISPRCasFinder
